@@ -1,0 +1,22 @@
+{
+  "name": "currency-converter-app",
+  "version": "1.0.0",
+  "description": "A modern currency converter application that fetches current market rates daily.",
+  "main": "src/js/app.js",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "keywords": [
+    "currency",
+    "converter",
+    "exchange rates"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
