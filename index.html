@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/countries-list"></script>
+</head>
+<body>
+    <div class="exchange-info">
+        <h3 id="exchange-title">Value of 1000 USD in various currencies:</h3>
+        <ul id="exchange-values"></ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <select id="theme-select" class="theme-select">
+                <option value="light">Light Theme</option>
+                <option value="dark">Dark Theme</option>
+            </select>
+            <select id="language-select" class="language-select">
+                <option value="en">English</option>
+                <option value="pl">Polski</option>
+                <option value="de">Deutsch</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+        <h1 id="title">Currency Converter</h1>
+        <div class="converter">
+            <input type="number" id="amount" placeholder="Amount" />
+            <select id="from-currency">
+                <option value="USD">USD - US Dollar</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - British Pound</option>
+                <option value="PLN">PLN - Polish Zloty</option>
+            </select>
+            <span id="to-text">to</span>
+            <select id="to-currency">
+                <option value="USD">USD - US Dollar</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - British Pound</option>
+                <option value="PLN">PLN - Polish Zloty</option>
+            </select>
+            <button id="convert-button">Convert</button>
+        </div>
+        <div class="result">
+            <h2 id="result"></h2>
+        </div>
+        <div class="time-converter">
+            <h3>Current Time in Selected Country:</h3>
+            <input type="text" id="country-input" placeholder="Enter country name" />
+            <div id="autocomplete-list" class="autocomplete-items"></div>
+            <div id="current-time"></div>
+            <div class="clock">
+                <div class="hand hour" id="hour-hand"></div>
+                <div class="hand minute" id="minute-hand"></div>
+                <div class="hand second" id="second-hand"></div>
+                <div class="clock-face">
+                    <!-- Clock face divisions will be added by JavaScript -->
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p id="exchange-source">Exchange rates are sourced from <a href="https://exchangerate-api.com" target="_blank">ExchangeRate-API</a>.</p>
+        </footer>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

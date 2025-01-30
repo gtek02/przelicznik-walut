@@ -1,0 +1,240 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+.language-select, .theme-select {
+    background-color: transparent;
+    color: inherit;
+    border: 1px solid #444;
+    padding: 5px;
+}
+
+body.light .language-select, body.light .theme-select {
+    border: 1px solid #ccc;
+}
+
+.content {
+    display: flex;
+}
+
+.exchange-info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+    height: 100%;
+    overflow-y: auto;
+}
+
+body.dark .exchange-info {
+    background-color: #333;
+    border-right: 1px solid #444;
+}
+
+.exchange-value {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+body.dark .exchange-value {
+    background-color: #333;
+    border: 1px solid #444;
+}
+
+.converter {
+    margin-left: 220px; /* Adjust based on the width of the exchange-info */
+    padding: 20px;
+}
+
+.chart-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-left: 1px solid #ccc;
+}
+
+body.dark .chart-container {
+    background-color: #333;
+    border-left: 1px solid #444;
+}
+
+.time-converter {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-left: 1px solid #ccc;
+}
+
+body.dark .time-converter {
+    background-color: #333;
+    border-left: 1px solid #444;
+}
+
+input, select, button {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: transparent;
+    color: inherit;
+}
+
+body.light input, body.light select, body.light button {
+    border: 1px solid #ccc;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+body.light button:hover {
+    background-color: #ddd;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+footer a {
+    color: #888;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+    background-color: #e9e9e9;
+}
+
+body.dark .autocomplete-items div {
+    background-color: #333;
+    color: #fff;
+    border-bottom: 1px solid #444;
+}
+
+body.dark .autocomplete-items div:hover {
+    background-color: #555;
+}
+
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 10px solid #333;
+    border-radius: 50%;
+    margin: 20px auto;
+    background: white;
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand.second {
+    height: 2px;
+    background: red;
+}
+
+body.dark .clock {
+    border-color: #ccc;
+    background: #333;
+}
+
+body.dark .hand {
+    background: #ccc;
+}
+
+body.dark .hand.second {
+    background: red;
+}
+
+.mark {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: black;
+    top: 0;
+    left: 50%;
+    transform-origin: bottom;
+}
+
+.hour-mark {
+    height: 20px;
+}
+
+body.dark .mark {
+    background: #ccc;
+}
